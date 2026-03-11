@@ -2,6 +2,8 @@
 
 Visual UI annotation overlay for Tauri v2 desktop apps. Injects a Fabric.js-based drawing canvas into the WebView with native screenshot capture. Intended for debug builds.
 
+![Annotation overlay in a Tauri desktop app — select elements, draw shapes, and add comments directly on the running UI](assets/screenshot.png)
+
 ## Features
 
 - **Select** elements to annotate with comments
@@ -18,7 +20,7 @@ Add to your `src-tauri/Cargo.toml`:
 
 ```toml
 [dependencies]
-tauri-plugin-redline = { git = "https://github.com/twiced-technology-gmbh/tauri-plugin-redline" }
+tauri-plugin-redline = { git = "https://github.com/twiced-technology-gmbh/redline-plugin-tauri" }
 ```
 
 Register the plugin on the Builder (**before** `.setup()`). The plugin uses `js_init_script` which must be registered before the WebView is created:
