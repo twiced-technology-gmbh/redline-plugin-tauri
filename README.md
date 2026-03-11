@@ -1,5 +1,8 @@
 # tauri-plugin-redline
 
+[![crates.io](https://img.shields.io/crates/v/tauri-plugin-redline.svg)](https://crates.io/crates/tauri-plugin-redline)
+[![MIT](https://img.shields.io/crates/l/tauri-plugin-redline.svg)](LICENSE)
+
 Visual UI annotation overlay for Tauri v2 desktop apps. Injects a Fabric.js-based drawing canvas into the WebView with native screenshot capture. Intended for debug builds.
 
 ![Annotation overlay in a Tauri desktop app — select elements, draw shapes, and add comments directly on the running UI](assets/screenshot.png)
@@ -20,7 +23,7 @@ Add to your `src-tauri/Cargo.toml`:
 
 ```toml
 [dependencies]
-tauri-plugin-redline = { git = "https://github.com/twiced-technology-gmbh/redline-plugin-tauri" }
+tauri-plugin-redline = "0.1"
 ```
 
 Register the plugin on the Builder (**before** `.setup()`). The plugin uses `js_init_script` which must be registered before the WebView is created:
