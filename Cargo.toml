@@ -1,0 +1,27 @@
+[package]
+name = "tauri-plugin-redline"
+version = "0.1.0"
+edition = "2021"
+description = "Visual UI annotation overlay for Tauri apps (debug builds)"
+license = "MIT"
+repository = "https://github.com/twiced-technology-gmbh/tauri-plugin-redline"
+keywords = ["tauri", "tauri-plugin", "annotation", "redline", "ui-review"]
+links = "tauri-plugin-redline"
+
+[lib]
+name = "tauri_plugin_redline"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[dependencies]
+tauri = { version = "2", features = [] }
+base64 = "0.22"
+
+[target.'cfg(target_os = "macos")'.dependencies]
+objc2 = "0.6"
+objc2-foundation = { version = "0.3", features = ["NSData", "NSDictionary"] }
+objc2-app-kit = { version = "0.3", features = ["NSImage", "NSBitmapImageRep", "NSImageRep"] }
+objc2-web-kit = { version = "0.3", features = ["WKWebView", "WKSnapshotConfiguration", "block2"] }
+block2 = "0.6"
+
+[build-dependencies]
+tauri-plugin = { version = "2", features = ["build"] }
