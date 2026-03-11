@@ -2,10 +2,14 @@
 name = "tauri-plugin-redline"
 version = "0.1.0"
 edition = "2021"
-description = "Visual UI annotation overlay for Tauri apps (debug builds)"
+authors = ["Daniel Deusing <mail@danieldeusing.de>"]
+description = "Visual UI annotation overlay for Tauri v2 apps — draw on your running UI, export structured JSON for AI coding agents"
 license = "MIT"
-repository = "https://github.com/twiced-technology-gmbh/tauri-plugin-redline"
+repository = "https://github.com/twiced-technology-gmbh/redline-plugin-tauri"
+homepage = "https://seedr.toolr.dev/skills/redline"
 keywords = ["tauri", "tauri-plugin", "annotation", "redline", "ui-review"]
+categories = ["development-tools", "gui"]
+include = ["src/**/*", "build.rs", "Cargo.toml", "LICENSE", "README.md", "permissions/**/*"]
 links = "tauri-plugin-redline"
 
 [lib]
